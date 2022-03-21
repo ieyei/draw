@@ -1,6 +1,6 @@
-<mxfile modified="2022-03-21T02:10:08.425Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" etag="gMBnNkUYk2OYpJgtypJQ" version="17.1.3" type="github" pages="4">
+<mxfile modified="2022-03-21T07:43:57.938Z" host="app.diagrams.net" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" etag="F7MxoVLt0Y-my0RtqtRa" version="17.1.3" type="github" pages="4">
   <diagram id="kM9bM3xjdO65-L9B_Uqa" name="Summary">
-    <mxGraphModel dx="1583" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1500" dy="1072" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="g_iOAynG4yNdSNbX03ec-0" />
         <mxCell id="g_iOAynG4yNdSNbX03ec-1" parent="g_iOAynG4yNdSNbX03ec-0" />
@@ -65,7 +65,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="74MFT9gsKvn_3dHS32Gz" name="Security Group">
-    <mxGraphModel dx="1583" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1500" dy="1072" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="vUuuzbDvtXMvgy9xy972-0" />
         <mxCell id="vUuuzbDvtXMvgy9xy972-1" parent="vUuuzbDvtXMvgy9xy972-0" />
@@ -100,7 +100,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="eu3k8cO57RfMYkhWjsiw" name="CNI Configuration">
-    <mxGraphModel dx="1500" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2028" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="qyEUbQNJ9Y4Oz_ODb8zN-0" />
         <mxCell id="qyEUbQNJ9Y4Oz_ODb8zN-1" parent="qyEUbQNJ9Y4Oz_ODb8zN-0" />
@@ -177,11 +177,11 @@
     </mxGraphModel>
   </diagram>
   <diagram id="qKRuREYzbvf_0ejUUfB3" name="Security Group Policy">
-    <mxGraphModel dx="1500" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2028" dy="1129" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="LIdIXKkxcfa-EGwzWzqo-0" />
         <mxCell id="LIdIXKkxcfa-EGwzWzqo-1" parent="LIdIXKkxcfa-EGwzWzqo-0" />
-        <mxCell id="6wC1RawPrL7yRlgK8VDb-1" value="SecurityGroupPolicy&#xa;&#xa;apiVersion: vpcresources.k8s.aws/v1beta1&#xa;kind: SecurityGroupPolicy&#xa;metadata:&#xa;  name: allow-rds-access&#xa;spec:&#xa;  podSelector:&#xa;    matchLabels:&#xa;      app: rds&#xa;  securityGroups:&#xa;    groupIds:&#xa;      - ${POD_SG}" style="fillColor=#EFF0F3;strokeColor=none;dashed=0;verticalAlign=top;fontStyle=0;fontColor=#232F3D;fontSize=11;align=left;" parent="LIdIXKkxcfa-EGwzWzqo-1" vertex="1">
+        <mxCell id="6wC1RawPrL7yRlgK8VDb-1" value="SecurityGroupPolicy&#xa;&#xa;apiVersion: vpcresources.k8s.aws/v1beta1&#xa;kind: SecurityGroupPolicy&#xa;metadata:&#xa;  name: allow-rds-access&#xa;spec:&#xa;  podSelector:&#xa;    matchLabels:&#xa;      use: rds-connect&#xa;  securityGroups:&#xa;    groupIds:&#xa;      - ${POD_SG}" style="fillColor=#EFF0F3;strokeColor=none;dashed=0;verticalAlign=top;fontStyle=0;fontColor=#232F3D;fontSize=11;align=left;" parent="LIdIXKkxcfa-EGwzWzqo-1" vertex="1">
           <mxGeometry x="80" y="80" width="240" height="200" as="geometry" />
         </mxCell>
         <mxCell id="wUDrokWdT8LYlGiZAVIx-0" value="&lt;h1&gt;SecurityGroupPolicy CRD&lt;/h1&gt;&lt;p&gt;Specify which security groups to assign to pods through the SecurityGroupPolicy CRD.&lt;/p&gt;&lt;p&gt;If the pod has the label app: rds, a security group will be attached to it.&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=11;fontColor=#808080;" parent="LIdIXKkxcfa-EGwzWzqo-1" vertex="1">
@@ -193,8 +193,8 @@
         <mxCell id="wUDrokWdT8LYlGiZAVIx-2" value="" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon;prIcon=pod;fontSize=11;fontColor=#FF8000;" parent="LIdIXKkxcfa-EGwzWzqo-1" vertex="1">
           <mxGeometry x="310" y="740" width="70" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="3TRulwfSeyOlwZSUIC_K-0" value="&lt;font&gt;pod with &lt;br&gt;label ( app: rds )&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#808080;" parent="LIdIXKkxcfa-EGwzWzqo-1" vertex="1">
-          <mxGeometry x="80" y="810" width="85" height="30" as="geometry" />
+        <mxCell id="3TRulwfSeyOlwZSUIC_K-0" value="&lt;font&gt;pod with label &lt;br&gt;( use: rds-connect )&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#808080;" parent="LIdIXKkxcfa-EGwzWzqo-1" vertex="1">
+          <mxGeometry x="52.5" y="810" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="mNwPJv_pFo5NBxnMGbUc-0" value="deploy" style="endArrow=classic;html=1;rounded=0;fontSize=11;fontColor=#808080;strokeColor=#808080;strokeWidth=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="LIdIXKkxcfa-EGwzWzqo-1" source="mNwPJv_pFo5NBxnMGbUc-1" target="wUDrokWdT8LYlGiZAVIx-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
